@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .grid{
+            display: grid;
+
+            /* Specifies the number (and the heights) of the rows in a grid layout */
+
+            /* Sets remaining rows 1fr(default value) and also called "grid-auto-rows: 1fr" in default case */
+            grid-template-rows: 1fr 1fr 4fr;
+            
+            /* "auto" can not be specified/used in the grid-template-rows unlike grid-template-columns untill the grid is inside the container with specified height otherwise "auto" has no effect on the grid layout */
+            /* grid-template-rows: 1fr auto 1fr 4fr; */
+
+            /* grid-template-rows: repeat(4, 2fr); - It will not work with unit fr(fraction) if the "grid-auto-rows" is not specified/set with a particular value otherwise it will make every row of 1fr */
+            /* "fr" is basically a fraction/proportion of the region and it works perfectly when the grid is inside the container with specified height in case of using "fr" in rows and no need to worry about width as it is already fixed or specified with a value(width of the screen) in case of using "fr" in columns */
+            /* grid-template-rows: repeat(4, 2fr); */
+            /* grid-template-rows: repeat(4, 3fr); */
+            /* grid-template-rows: repeat(4, 4fr); */
+
+            /* Specifies the "auto" size for the rows which are not given/set to any value*/
+            /* grid-auto-rows: 2fr; */
+            /* grid-auto-rows: 3fr; */
+            /* grid-auto-rows: 4fr; */
+
+            grid-template-columns: 1fr 4fr;
+            /* grid-template-columns: 1fr 4fr 2fr; */
+            /* grid-template-columns: repeat(4, 2fr); */
+
+            /* grid-gap: 2rem; */
+            grid-gap: 1rem;
+        }
+        .box{
+            background-color: red;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+        <div class="box">This is box-7</div>
+        <div class="box">This is box-8</div>
+        <div class="box">This is box-9</div>
+        <div class="box">This is box-10</div>
+        <div class="box">This is box-11</div>
+        <div class="box">This is box-12</div>
+        <div class="box">This is box-13</div>
+        <div class="box">This is box-14</div>
+        <div class="box">This is box-15</div>
+        <div class="box">This is box-16</div>
+        <div class="box">This is box-17</div>
+        <div class="box">This is box-18</div>
+        <div class="box">This is box-19</div>
+        <div class="box">This is box-20</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+
+
+            /* CSS Grid min-content, max-content and minmax() function by Yahoo Baba */
+
+            /* CSS min-content in columns by Yahoo Baba */
+            /* min-content - The minimum possible width that a content (a group of words) will take. It means width of the biggest word in the content. */
+            /* grid-template-columns: min-content 1fr 1fr 1fr; */
+
+            /* CSS max-content in columns by Yahoo Baba */
+            /* max-content - The maximum possible width that a content (a group of words) can take. It means the width of the content when all the words arranged together in one line. */
+            /* grid-template-columns: max-content 1fr 1fr 1fr; */
+
+            /* CSS min-content and max-content combined in columns by Yahoo Baba*/
+            /* grid-template-columns: min-content max-content 1fr 1fr; */
+
+            /* CSS min-content in rows by Yahoo Baba and it is used with "repeat()" */
+            /* grid-template-rows: repeat(2, min-content); */
+            /* CSS max-content in rows by Yahoo Baba works same as min-content in rows */
+            /* grid-template-rows: repeat(2, max-content); */
+
+            /* The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max */
+            /* VERY IMP - minmax() function always tries its best to maintain the max value of the minmax() function for grid items */
+
+            /* CSS minmax() function in rows by Yahoo Baba */
+            /* grid-template-rows: repeat(2, minmax(150px, min-content)); */
+            /* grid-template-rows: repeat(2, minmax(150px, 500px)); */
+
+            /* CSS minmax() function in colums by Yahoo Baba */
+            /* grid-template-columns: minmax(150px, 300px) 1fr 1fr 1fr; */
+            /* grid-template-columns: minmax(150px, 50%) 1fr 1fr 1fr; */
+            /* grid-template-columns: minmax(150px, 1fr) 1fr 1fr 1fr; */
+
+
+            /* CSS Grid auto-fill and auto-fit by Yahoo Baba */
+            
+            /* CSS auto-fill by Yahoo Baba*/
+            /* Auto-fill:  The auto-fill property fills the rows with as many columns as it can fit. The newly added column may be empty but it will still occupy a space in the given row. It is an important property in the CSS grid that make a responsive layout without writing a media query for each grid. */
+            /* It creates extra tracks and generally used with "repeat()" */
+            /* grid-template-columns: repeat(3, 100px); */
+            /* grid-template-columns: repeat(auto-fill, 100px); */
+
+            /* CSS auto-fit by Yahoo Baba*/
+            /* Auto-fit: Auto-fit behaves same as auto-fill but the auto-fit property fills the currently available space by expanding its size to take up available space according to device width. If all grid items are empty it is treated as a single track of size 0px. */
+            /* It does not create extra tracks and generally used with "repeat()" */
+            /* grid-template-columns: repeat(auto-fit, 100px); */
+
+            /* grid-template-rows: repeat(2, 100px); */
+            
+            /* CSS auto-fill with minmax() function by Yahoo Baba */
+            /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+            /* CSS auto-fit with minmax() function by Yahoo Baba */
+            /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+
+
+            /* With auto-fill, everything is the same as auto-fit, except empty tracks are not collapsed. They are preserved. Basically, the grid layout remains fixed, with or without items */
+            /* Difference between auto-fill and auto-fit can easily be seen when there are empty tracks left in the rows */
+            /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+
+            /* With auto-fit, when there are not enough grid items to fill the number of tracks created, those empty tracks are collapsed */
+            /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+
+
+            /* For more infomation on auto-fill and auto-fit 
+            Stackoverflow LINK - https://stackoverflow.com/questions/46226539/what-is-the-difference-between-auto-fill-and-auto-fit */
+
+
+
+
+            /* CSS Grid Tutorial 43 by Code with Harry */
+
+
+            /* grid-template-columns: 112px 112px 112px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); */
+            /* grid-template-columns: repeat(auto-fit, minmax(30px, 40px)); */
+
+            /* justify-content: center; */
+        }
+        .box{
+            border: 2px solid black;
+            background-color: aquamarine;
+            
+            padding: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- CSS Grid min-content, max-content and minmax() function by Yahoo Baba -->
+
+        <!-- <div class="box">This is min-content box</div> -->
+        <!-- <div class="box">This is max-content box</div> -->
+
+        <!-- <div class="box">This is min-content box with content overflow and it is defined as the minimum possible width that a content (a group of words) will take.</div>
+        <div class="box">This is max-content box with content overflow and it is defined as the maximum possible width that a content (a group of words) can take.</div> -->
+
+        <!-- <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div> -->
+
+
+        <!-- CSS Grid auto-fill and auto-fit by Yahoo Baba -->
+
+        <!-- <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div> -->
+
+
+
+
+        <!-- CSS Grid Tutorial 43 by Code with Harry -->
+
+
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-12</div>
+    </div>
+</body>
+</html>

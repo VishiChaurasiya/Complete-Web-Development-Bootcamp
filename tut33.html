@@ -1,0 +1,103 @@
+<!--                                            POINT OF THIS TUT :
+If we wanted to reduce opacity of bg we would have to do it in body{} which would reduce opacity of text also. So to seperate bg and text he used ::before with  bg  & no content. Now reducing opacity in section::before selector reduces opacity of bg but not the text because they are seperate now -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+
+            /* Creating/giving a background: url(image) using this way will not work even if we set width and height somehow but it is not possible to set opacity of the background image in this way and the exact way is given in the header::before */
+
+            /* background: url('https://source.unsplash.com/collection/190727/1600X900') no-repeat center center/cover;
+            width: 100%;
+            height: 95vh; */
+            /* It changes the opacity of the body and background-color not background: url(image) */
+            /* opacity: 0.5; */
+
+        }
+
+
+        /* IMPORTANT: It is technique to set opacity of the background image by using before and after pseudo selector and very very IMP */
+
+        /* (::before) Inserts content before every <header> element's content, and style the inserted content: */
+        header::before{
+            /* Using header::before(before/after pseudo selector), opacity of the background can be changed easily without any hussle */
+            background: url('https://source.unsplash.com/collection/190727/1600X900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            /* height: 100% will also work */
+            height: 100vh;
+            z-index: -1;
+
+            /* It changes the opacity of the background: url(image) and content */
+            opacity: 0.3;
+        }
+
+        .navigation{
+            font-family: 'Baloo Bhai 2', cursive;
+            font-size: 20px;
+            display: flex;
+            /* flex-direction: row; */
+        }
+        li{
+            list-style: none;
+            padding: 0px 23px;
+        }
+        section{
+            font-family: 'Baloo Bhai 2', cursive;
+            height: 233px;
+            /* border: 2px solid red; */
+            margin: 20px 192px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* section::before{
+            content: "this is before content";
+        } */
+        /* section::after{
+            content: "this is after content";
+        } */
+
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to Coding World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum rerum aut dolorum reprehenderit ducimus voluptates, alias quasi animi id eum. Earum fugiat omnis, laborum voluptatum recusandae ea iure quasi dolorem.</p>
+    </section>
+    <!-- <hr> -->
+</body>
+</html>

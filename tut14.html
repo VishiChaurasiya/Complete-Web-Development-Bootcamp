@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector uses only tag name */
+        /* Id selector associated with id of the HTML element prefixed with # */
+        /* Class selector associated with class of the HTML element prefixed with . */
+        /* Grouping selector used to add the CSS properties to multiple elements with comma separated class/tag name i.e, class1, class2 {CSS Property}  */
+
+        /* Element Selector */
+        p{
+            border: 2px solid red;
+        }
+
+        /* Id Selector */
+        #firstPara{ 
+            color: green;
+        }
+
+        /* Class Selector */
+        .bgBlue{
+            color: yellow;
+            background-color: blue;
+        }
+
+        /* Grouping Selector */
+        span, footer{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p id="firstPara">This is a simple paragraph to demonstrate CSS Selectors</p>
+    <p id="secondPara" class="redElement bgBlue">This is another simple paragraph to demonstrate CSS Selectors</p>
+    <div>
+        <p>This is yet another simple paragraph to demonstrate CSS Selectors</p>
+        <span>This is a span inside div</span>
+    </div>
+    <footer>
+        This is a footer
+    </footer>
+</body>
+</html>

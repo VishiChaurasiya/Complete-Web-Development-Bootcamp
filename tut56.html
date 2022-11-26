@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+
+        // let main = document.getElementById('main');
+        // console.log(main);
+        // let nav = document.getElementById('nav');
+        // console.log(nav);
+        // let navHTML = nav.innerHTML;
+        // console.log(navHTML);
+        // nav.innerHTML = '<li>Dynamic element</li>';
+        // console.log(nav.innerHTML);
+
+        // let containers = document.getElementsByClassName('container');
+        // console.log(containers);
+        // console.log(containers[0]);
+        // console.log(containers[1]);
+        // console.log(containers[2]); // Undefined
+
+        // let sel = document.querySelector('.container'); // returns the first element with class "container"
+        // let sel = document.querySelector('#nav');
+        // let sel = document.querySelector('#nav>li'); // returns the first "li" of "#nav"
+        // console.log(sel);
+        // console.log("Selector returns ", sel); // "sel" won't be printed/concatenated as a string here
+
+        let sel = document.querySelectorAll('#nav>li'); // returns all matching "li" elements which are child of "#nav"  
+        console.log("Selector returns ", sel);
+        sel[0].innerHTML = "Inserted";
+        sel[1].innerHTML = "Inserted1";
+        console.log(sel[1].innerHTML);
+
+    </script>
+</body>
+</html>

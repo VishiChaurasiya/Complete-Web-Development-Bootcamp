@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+
+            /* Making/initializing the container as a flex container/box */
+            display: flex;
+
+            /* Flex properties for a flex container */
+
+            /* NOTE: Height/Width of the flex items will be managed automatically by flex container when it exceeds */
+
+            /* flex-direction - default direction/value is row */
+
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap - default value is no-wrap */
+
+            /* flex-wrap: wrap; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* Specifies how flexbox items are placed in the flexbox - Syntax: <'flex-direction'> || <'flex-wrap'>  and it is a shorthand for flex-direction and flex-wrap */
+            /* flex-flow: row-reverse wrap; */
+
+            /* justify-content: center; */
+
+            /* justify-content: space-between - it doesn't include corner/start-end space*/
+            /* justify-content: space-between; */
+
+            /* justify-content: space-evenly - it includes corner/start-end space*/
+            /* justify-content: space-evenly; */
+
+            /* justify-content: space-around - it includes corner/start-end space but works as a margin is given */
+            /* justify-content: space-around; */
+
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+
+            /* align-items: stretch; - it is by default value when flex-item's height or width is not given and it is totally depends upon in which direction flex-item has to stretch and that direction should not be specified with a value */
+            /* align-items: stretch; */
+        }
+        .item{
+            width: 100px;
+            height: 50px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+        
+        /* Flex properties for a flex item */
+        #item-1{
+            /* Items with higher order will go behind or at the last of all items */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+            /* This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor). */
+            /* flex-grow: 2; */
+
+            /* The flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink. */
+            /* flex-shrink: 2; */
+        }
+        #item-2{
+            /* order: 23; */
+            /* flex-grow: 10; */
+            /* flex-shrink: 10; */
+
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+            /* flex-basis: 490px; */
+            /* width: 490px; */
+        }
+        #item-3{
+            /* Syntax: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+            /* flex: 1 1 534px; */
+            
+            /* align-self: flex-end; */
+            /* align-self: flex-start; */
+            /* align-self: center; */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+
+    <!-- Flex container/box -->
+    <div class="container">
+
+        <!-- Flex items -->
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+    </div>
+</body>
+</html>

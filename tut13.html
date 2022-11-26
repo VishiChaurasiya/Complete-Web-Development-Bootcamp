@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="tut13.css">
+    <style>
+        p{
+            color: darkblue;
+            /* !important makes a property's precedence to the most high than the same property used in other CSS */
+            background-color: seagreen !important; 
+        }
+    </style>
+    <!-- Whichever comes at the last given the highest priority between internal and external CSS style sheet -->
+</head>
+<body>
+    <h3>This is CSS Tutorial</h3>
+
+    <!-- Inline CSS has the highest priority given than internal and external CSS style sheet -->
+    <p style="color: red; background-color: yellow;">This tutorial will teach you everything you need to know about HTML/CSS</p>
+    <p>This tutorial will teach you everything you need to know about HTML/CSS</p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 12px;
+            border: 2px solid red;
+            margin: 23px 12px;
+            background-color: khaki;
+
+            /* box-shadow: offset-x(shadow-x) offset-y(shadow-y) color */
+            /* box-shadow: 10px 10px green; */
+            /* box-shadow: -10px -10px green; */
+
+            /* box-shadow: offset-x offset-y blur-radius color */
+            /* box-shadow: 5px 5px 10px green; */
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color */
+            /* box-shadow: 5px 5px 10px 5px green; */
+
+            /* box-shadow: offset-x offset-y rgba-color(red, green, blue, alpha) */
+            /* Higher the alpha, higher the darkness and alpha value ranges from 0 to 1 just like percentage */
+            /* box-shadow: -7px -5px 10px 10px rgba(80, 131, 207, 0.5); */
+
+            /* inset used to change the shadow from an outer shadow (outset) to an inner shadow */
+            /* box-shadow: inset 7px 5px green; */
+
+            /* Multi comma separated shadows */
+            /* box-shadow: 7px 5px green, 10px 15px rgb(47, 0, 255); */
+        }
+        .card h2{
+            /* box-shadow: 5px 5px green; */
+
+            /* text-shadow: 2px 2px green; */
+            /* text-shadow: 4px 4px 7px white; */
+            text-shadow: -3px -3px 7px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ Course</h2>
+            <p>I've started this course which does not mean that we will stop this course. We will continue this course to completion. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit, nobis ab facere quos, beatae sapiente reprehenderit nemo quas ducimus vero hic eligendi perspiciatis voluptas laboriosam at et nostrum fuga quae, non dolorum doloribus.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit, nobis ab facere quos, beatae sapiente reprehenderit nemo quas ducimus vero hic eligendi perspiciatis voluptas laboriosam at et nostrum fuga quae, non dolorum doloribus.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is CSS Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit, nobis ab facere quos, beatae sapiente reprehenderit nemo quas ducimus vero hic eligendi perspiciatis voluptas laboriosam at et nostrum fuga quae, non dolorum doloribus.</p>
+        </div>
+    </div>
+</body>
+</html>

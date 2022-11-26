@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* The grid-template-areas property specifies areas within the grid layout */
+        /* You can name grid items by using the grid-area property, and then reference to the name in the grid-template-areas property */
+
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+
+            /* Use period sign to refer to a grid item with no name */
+            /* 'navbar navbar . .' */
+
+            /* Each area is defined by apostrophes */
+        }
+        .item{
+            background-color: rgb(245, 245, 121);
+            border: 3px solid black;
+            padding: 12px 23px;
+        }
+        #navbar{
+            grid-area: navbar;
+        }
+        #section{
+            grid-area: section;
+        }
+        #aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="navbar" class="item">Home About Contact Us</div>
+
+        <div id="section" class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto saepe, nihil magni at ex iure ab tempora fugiat assumenda laudantium quia. Ut enim quas beatae, perspiciatis amet quae voluptatum sed odit reiciendis praesentium soluta excepturi sit eos tempora doloremque ipsa placeat obcaecati qui quia assumenda dolorum, quisquam adipisci. Distinctio cumque, ex quidem odio est in dolorem, aut nesciunt, ut repellendus sit suscipit voluptatum pariatur deserunt asperiores doloremque adipisci voluptatibus officiis facere ipsa dolore quod molestias optio repellat. Necessitatibus porro facilis quod quos magni atque aperiam, minima voluptatem, fugiat, itaque iste laudantium nisi vel nam voluptatum voluptas similique quaerat nesciunt tenetur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci debitis vero reprehenderit eaque dignissimos perspiciatis ipsam, explicabo amet, corporis voluptatibus nulla error minus aliquid ipsum nesciunt tempore voluptates architecto nisi rerum. Ullam harum culpa delectus facilis ea dolorum, odit consequuntur doloribus quo libero non voluptatibus aliquid earum voluptas. Laboriosam id ab est dicta culpa dignissimos atque vel esse possimus excepturi labore nam, eveniet repudiandae harum eius facilis praesentium animi beatae doloremque vero a inventore quod! Ipsa animi inventore deleniti laboriosam reprehenderit iste culpa cum dolorum, repudiandae quaerat provident fuga atque. Ipsam iusto distinctio similique possimus doloribus eveniet tenetur perferendis? Repellendus!</div>
+
+        <div id="aside" class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, similique. Quos distinctio itaque autem neque asperiores, eius nulla excepturi temporibus doloribus dolor commodi a tempora eum id quia inventore sit voluptatem, impedit consequatur vitae nesciunt blanditiis. Maxime, fugiat! In minima aliquam similique quas? Fugiat dolores iste quia distinctio laborum. Praesentium facere quia nam sapiente hic atque labore, in fugit quod nesciunt ratione id sed voluptatibus dicta autem blanditiis! Recusandae sunt provident blanditiis similique, doloremque laboriosam corrupti inventore porro animi explicabo molestiae ullam maxime sint. Nam repellendus eum corrupti provident in porro beatae. Nesciunt, veniam? Impedit eius perferendis atque harum at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos quam vel id vero cum accusantium ullam eaque ducimus maxime debitis facere temporibus animi sit omnis cumque magnam nihil, nulla nam, quibusdam deserunt voluptas, dolores maiores. Ab ipsa at autem porro modi facere error quam labore, pariatur alias ducimus voluptate!</div>
+
+        <footer class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, harum!</footer>
+
+
+
+
+        <!-- <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-9</div>
+        <div class="item">Item-10</div>
+        <div class="item">Item-11</div>
+        <div class="item">Item-12</div>
+        <div class="item">Item-13</div>
+        <div class="item">Item-14</div> -->
+    </div>
+</body>
+</html>

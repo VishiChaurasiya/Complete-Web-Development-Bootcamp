@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors & more designing</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: rgb(34, 231, 34);
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Pseudo selector is written like this */
+        a:visited{ 
+            color: rgb(0, 228, 197);
+            background-color: white;
+        }
+        a:hover{
+            color: rgb(10, 0, 5);
+            background-color: rgb(250, 150, 0);
+        }
+        a:active{
+            background-color: darkblue;
+        }
+
+        .btn{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: rgb(212, 91, 91);
+            padding: 5px;
+            border: none;
+            cursor: pointer; /* Used to get the cursor on the element */
+            font-size: 13px;
+            border-radius: 4px;
+        }
+        .btn:hover{
+            /* Pseudo Selector for .btn */
+            color: darkgoldenrod;
+            background-color: rgb(233, 245, 201);
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti suscipit delectus excepturi facere porro incidunt quaerat, ipsum qui iusto enim quas obcaecati saepe natus assumenda distinctio dicta voluptates repellendus necessitatibus.</p>
+        <a href="https://www.google.com" target="_blank" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+</body>
+</html>

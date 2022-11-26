@@ -1,0 +1,25 @@
+<!-- LECTURE 33 - TECHNIQUE 1 -->
+<!-- 
+/* IMPORTANT: It is technique to set opacity of the background image by using before and after pseudo selector and very very IMP */
+
+/* (::before) Inserts content before every <header> element's content, and style the inserted content: */
+
+header::before{
+    /* Using header::before(before/after pseudo selector), opacity of the background can be changed easily without any hussle */
+    background: url('https://source.unsplash.com/collection/190727/1600X900') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* height: 100% will also work */
+    height: 100vh;
+    z-index: -1;
+
+    /* It changes the opacity of the background: url(image) and content */
+    opacity: 0.3;
+} 
+-->
+
+

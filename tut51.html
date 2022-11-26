@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Scope, Conditionals & Switch Case</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+
+        // var is called as function scope that is if a variable is declared using var keyword it will be accessible throughout the function
+        // var string1 = "This is a string"; // var keyword used to create function scoped variable
+        // var string1 = "This is a string2"; // no error in  declaring same variable with var keyword
+        // console.log(string1);
+
+
+        // let & const are also called as block scope that is they are accessible within that particular block
+        // let a = "u"; // let keyword used to create block scoped variable 
+        // let a = "u6"; // SyntaxError: Identifier 'a' has already been declared
+
+        // console.log(a);
+
+        // {
+            // let a = "u6"; // No error
+            // console.log(a);
+        // }
+
+        // console.log(a);
+
+
+        // const b = "This cannot be changed";
+        // console.log(b);
+        // b = "Const is being changed"; // TypeError: Assignment to constant variable
+
+
+        // let age = 34;
+        // age = 14;
+        // age = 2;
+        // age = 5;
+
+        // if-else ladder
+        // if(age > 18) {
+        //     console.log("You can drink Water");
+        // }
+        // else if(age == 2) {
+        //     console.log("Age is 2");
+        // }
+        // else if(age == 5) {
+        //     console.log("Age is 5");
+        // }
+        // else{
+        //     console.log("You can drink Cold Drink");
+        // }
+
+
+        // const cups = 45;
+        // const cups = 4;
+        // const cups = 41;
+        const cups = 43;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4");
+                break;
+
+            case 41:
+                console.log("The value of cups is 41");
+                break;
+
+            case 42:
+                console.log("The value of cups is 42");
+                break;
+
+            case 43:
+                console.log("The value of cups is 43");
+                break;
+
+            default:
+                console.log("The value of cups is none of 4, 41, 42, 43");
+                break;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body{
+            background-color: #50e2e2;
+        }
+
+        *{ /* Selecting all elements in an HTML page and known as CSS universal selectors*/
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container{
+            background-color: rgb(140, 140, 216);
+            border: 2px solid rgb(230, 18, 18);
+
+            /* We can set margin/padding for top, bottom, left, right sperately and combined as well */
+            /* padding-left: 20px; */
+            /* padding-right: 20px; */
+            /* padding-top: 10px; */
+            /* padding-bottom: 10px; */
+
+            /* margin-left: 20px; */
+            /* margin-right: 20px; */
+            /* margin-top: 10px; */
+            /* margin-bottom: 10px; */
+
+            /* Padding/margin is applied for all the directions in this case/syntax */
+            /* padding: 70px; */
+            /* margin: 70px; */
+
+            /* padding/margin: top right bottom left; */
+            /* padding: 23px 56px 6px 78px; */
+            /* margin: 23px 56px 6px 78px; */
+
+            /* padding/margin: y(top/bottm) x(left/right); */
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 20px;
+
+            /* Actual width/height also contains the width/height of padding too */
+            width: 1000px;
+
+            /* box-sizing: border-box; will not include the padding width as the actual width of the HTML element and ultimately it will increase height of the element and decrease width of the content inside it to maintain the cause*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium qui rerum vel et dolor excepturi cumque quia aliquam odio, error ut eius dolorum cum quam nihil architecto accusamus. Sed, recusandae!</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium qui rerum vel et dolor excepturi cumque quia aliquam odio, error ut eius dolorum cum quam nihil architecto accusamus. Sed, recusandae!</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium qui rerum vel et dolor excepturi cumque quia aliquam odio, error ut eius dolorum cum quam nihil architecto accusamus. Sed, recusandae!</p>
+    </div>
+</body>
+</html>

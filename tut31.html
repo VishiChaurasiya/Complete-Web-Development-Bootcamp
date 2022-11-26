@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        /* CSS Selector Reference */
+
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* div p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        } */
+        
+        /* If p is contained by any li which is contained by any div */
+        /* div li p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        } */
+
+        /* It affects only direct child i.e, <p> is affected here as it is a direct child of <div> */
+        /* If p is right inside div then this CSS will be applied */
+        /* div > p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        } */
+
+        /* Selects the first(sibling element) <p> element that is placed immediately after <div> elements */
+        /* If p is right after div i.e p is the next sibling of div */
+        div + p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li>This will not get affected</li>
+                <p>This is a para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+        <p>This is second another paragraph</p>
+    </div>
+    <!-- <h4>This is just a heading and it will block becoming p from immediate/right after/next sibling of div</h4> -->
+    <p>This is outermost paragraph</p>
+    <p>This is another outermost paragraph</p>
+</body>
+</html>

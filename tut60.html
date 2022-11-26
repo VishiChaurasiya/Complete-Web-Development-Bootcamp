@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow functions tutorial
+    </div>
+    <script>
+
+        // function greet() {
+        //     console.log("Good Morning");
+        // }
+
+        // Arrow Function
+        // let greet = () => {
+        //     console.log("Good Morning from Arrow Function");
+        // }
+        let greet = () => console.log("Good Morning from Arrow Function");
+        greet();
+
+        setTimeout(() => {
+            console.log("We are inside setTimeout");
+        }, 3000);
+
+        // let sum = (a, b) => {
+        //     return a+b;
+        // }
+        // console.log(sum(1, 2));
+
+        // let sum2 = (a, b) => a+b;
+        // console.log(sum2(12, 2));
+
+        // let half = a => a/2;
+        // let half1 = a, b => a/2; // SyntaxError
+        // console.log(half(45));
+
+        let obj1 = { // Creating an object
+            greeting: "Good Morning",
+            names: ["Harry", "Rohan", "SkillF", "DJKhiladi"],
+            speak() {
+
+                // this.names.forEach((student) => {
+                    // With arrow functions the "this" keyword always represents the object that defined the arrow function
+                    // console.log(this.greeting + " Kukdoo Koo " + student); // lexical "this" when using Arrow function and "this" referring to object not Arrow function as Arrow function doesn't bind its "this" instead binds it to its parent i.e object
+                // });
+
+                this.names.forEach(function greet(student) {
+                    // In regular functions the "this" keyword represented the object that called the function, which could be the window, the document, a button or whatever
+                    console.log(this.greeting + " Kukdoo Koo " + student); //"this" referring to function "greet()" not object's "this" because "greet()" is not an Arrow function and "greet()" function binds its own "this"
+                });
+
+            }
+        }
+        obj1.speak(); // Calling method of an object using (.) dot operator
+
+    </script>
+</body>
+</html>

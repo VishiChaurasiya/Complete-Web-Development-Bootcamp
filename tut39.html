@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        /* CSS Reset */
+        body{
+            margin: 0;
+        }
+
+        /* CSS Grid */
+        .container{
+            display: grid;
+
+            /* Specifies the number (and the widths) of columns in a grid layout */
+
+            /* grid-template-columns: 300px 150px 150px; */
+            /* grid-template-columns: auto 150px 150px; */
+            /* grid-template-columns: 300px auto 150px; */
+            /* grid-template-columns: 300px 150px auto; */
+
+            /* grid-template-columns: 300px auto auto; */
+            /* grid-template-columns: auto 150px auto; */
+            /* grid-template-columns: auto auto 150px; */
+            /* grid-template-columns: auto auto auto; */
+
+            /* CSS Grid Layout introduces a new unit of length called fr, which is short for “fraction” */
+            /* grid-template-columns: 1fr 3fr 1fr; */
+            /* grid-template-columns: 2fr 3fr 2fr; */
+
+            /* IMP - Auto size of the columns is determined by the size of the container and on the size of the content of the items in the column and it also maintains the same/equal "padding-right" for all items */
+            /* IMP - Auto sets the same/equal "padding-right" for all the items in all the columns of the grid at any instant of time */
+            /* grid-template-columns: auto auto auto auto auto; */
+            
+            grid-template-columns: repeat(10, auto);
+            /* grid-template-columns: repeat(8, auto); */
+            /* grid-template-columns: repeat(10, 100px); */
+
+            /* grid-template-columns: auto auto auto auto auto; */
+
+            /* Defines the size of the gap between the rows and columns in a grid layout, and is a shorthand property */
+            /* grid-gap: 2rem; */
+            grid-gap: 10px;
+        }
+        .item{
+            /* width: 145px; */
+            /* height: 145px; */
+
+            background-color: red;
+            border: 1px solid black;
+            padding: 15px 5px;
+            /* margin: 4px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-10</div>
+        <div class="item">This is Item-11</div>
+        <div class="item">This is Item-12</div>
+        <div class="item">This is Item-13</div>
+        <div class="item">This is Item-14</div>
+        <div class="item">This is Item-15</div>
+        <div class="item">This is Item-16</div>
+        <div class="item">This is Item-17</div>
+        <div class="item">This is Item-18</div>
+        <div class="item">This is Item-19</div>
+        <div class="item">This is Item-20</div>
+    </div>
+</body>
+</html>

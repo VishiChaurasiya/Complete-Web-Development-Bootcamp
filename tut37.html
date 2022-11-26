@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* CSS transitions allows you to change property values smoothly, over a given duration */
+            /* Transition on ordinal/calculable properties can only be possible */
+            /* The properties having continuous value can only be transitioned and it is not possible to tansition a property/binary property having non-continuous value */
+
+            /* Continuous Property - background-color color width height padding margin font-size etc */
+            /* Non-Continuous Property - display float justify-content etc */
+
+            /* transition-property: background-color; */
+            /* transition-duration: 2s; */
+
+            /* Specifies the speed curve of the transition effect with a slow start */
+            /* transition-timing-function: ease-in; */
+
+            /* Specifies the speed curve of the transition effect with a slow end */
+            /* transition-timing-function: ease-out; */
+
+            /* Specifies a transition effect with a slow start and end */
+            /* transition-timing-function: ease-in-out; */
+
+            /* Specifies when the transition effect will start */
+            /* transition-delay: 2s; */
+
+            /* Transition shorthand property in one line */
+            /* Shorthand property - transition: background-color duration timing-function delay; */
+            /* transition: background-color 5s ease-in-out 0.3s; */
+            /* transition: width 4s ease-in-out 0.3s; */
+            /* transition: width 2s, height 4s; */
+
+            /* "all" used to transition all the properties of the element */
+            transition: all 5s ease-in-out 0.3s;
+
+        }
+
+        /* Used this to demonstrate the use of transition and to change the property's value of "#box" */
+        #box:hover{
+            background-color: green;
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            font-size: 45px;
+
+            /* This property is a non-continuous value property so it can't be transitioned */
+            /* display: inline; */
+        }
+    </style>
+</head>
+<body>
+    <h3>This is CSS Transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>

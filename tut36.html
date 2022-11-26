@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+    <style>
+        .container{
+            background-color: lightgreen;
+            display: flex;
+        }
+        .box{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+
+            /* The property comes first in order will be applied i.e vishi1 */
+            /* Declaring/defining the names of the animation to be used */
+            /* animation-name: vishi; */
+            /* animation-name: vishi1; */
+
+            /* animation-duration: 3s; */
+            animation-duration: 8s;
+
+            animation-iteration-count: 1;
+            /* animation-iteration-count: infinite; */
+
+            /* To make the end result of the animation or "to's" properties applied at the end of the animation*/
+            /* animation-fill-mode: forwards; */
+
+            /* To make the beginning result of the animation or "from's" properties applied at the end of the animation*/
+            /* animation-fill-mode: backwards; */
+
+            /* Default value of animation-fill-mode is none */
+            /* animation-fill-mode: none; */
+
+            /* "alternate" value of the property is used in lecture but not sure about it as it is not working */
+            /* animation-fill-mode: alternate; */ 
+
+            /* The animation has a slow start */
+            /* animation-timing-function: ease-in; */
+
+            /* The animation has a slow end */
+            /* animation-timing-function: ease-out; */
+
+            /* The animation has both a slow start and a slow end */
+            /* animation-timing-function: ease-in-out; */
+
+            /* Specifies a delay for the start of an animation. */
+            /* animation-delay: 3s; */
+
+            /* animation-direction: alternate; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate-reverse; */
+
+            /* These properties can be set using this shorthand */
+            /* Shorthand property - animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: vishi1 3s ease-in 1s 5 reverse backwards;
+        }
+
+        @keyframes vishi {
+            /* Defining properties for "from" - "to" stage/duration of the animation */
+            from{
+                width: 200px;
+            }
+            to{
+                width: 1000px;
+            }
+        }
+        @keyframes vishi1 {
+            /* Defining properties for different percentage of the animation duration */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

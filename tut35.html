@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Custom Properties</title>
+    <style>
+        :root{
+            /* Any variable/custom properties defined in root can be accessed in any block */
+
+            /* This variable can be accessed in any block */
+            /* It works as a global variable */
+
+            --box-color: blue;
+
+            --primary-color: khaki;
+            --danger-color: cyan;
+
+            --maxw: 433px;
+        }
+        .container{
+            /* This variable is blocked scope or local variable */
+
+            /* --box-color: khaki; */
+            background-color: var(--box-color);
+
+            max-width: var(--maxw);
+            height: 400px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            /* --box-color: blue; */
+            border: 2px solid var(--box-color);
+
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-color);
+            box-shadow: 3px 3px var(--danger-color);
+            margin: 2px 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
