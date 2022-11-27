@@ -1,5 +1,5 @@
 // Creates a connection with the socket.io of server
-// 'io()' is defined in the 'socket.io/socket.io.js' and included from server through HTML
+// 'io()' is defined in the 'socket.io/socket.io.js' file and included from server through <script> tag
 const socket = io('http://localhost:8000'); 
 
 // Get DOM elements in respective Js variables
