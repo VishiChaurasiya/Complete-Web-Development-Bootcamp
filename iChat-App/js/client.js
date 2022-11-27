@@ -1,4 +1,6 @@
-const socket = io('http://localhost:8000'); // Creates a connection with the socket.io of server
+// Creates a connection with the socket.io of server
+// 'io()' is defined in the 'socket.io/socket.io.js' and included from server through HTML
+const socket = io('http://localhost:8000'); 
 
 // Get DOM elements in respective Js variables
 const form = document.getElementById('send-container');
