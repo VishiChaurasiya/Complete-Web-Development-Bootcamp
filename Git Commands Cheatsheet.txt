@@ -1,6 +1,6 @@
 # Creating git repository
 touch .gitignore
-git config --global user.name "Vishi Chaurasia"
+git config --global user.name "Vishi Chaurasiya"
 git config --global user.email "youremail@example.com"
 git init
 git add .
