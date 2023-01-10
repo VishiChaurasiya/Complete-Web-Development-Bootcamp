@@ -17,3 +17,26 @@
     git add .
     git commit -m "Added Cheatsheet"
     git push origin master
+
+
+# Some useful commands by TrainWithShubham
+    1. git init
+        - Initializes an empty git repository
+    
+    2. git status
+        - Gives the information of the current state of the git repository
+
+    3. git checkout -b <branch name>
+        - Switching to new branch, if you want to switch to an existing branch then use git checkout <branch name> without -b
+
+    4. git add <filename>
+        - Used to stage the untracked file but it's still a untracked file until it gets committed
+    
+    5. git branch
+        - Gives the info/list of all the branches in git
+    
+    6. git commit -m "<your message>"
+        - Used to track the staged files after being added by git add
+    
+    7. git restore --staged <filename>
+        - Used to untrack/unstage the staged file
