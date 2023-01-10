@@ -33,10 +33,16 @@
         - Used to stage the untracked file but it's still a untracked file until it gets committed
     
     5. git branch
-        - Gives the info/list of all the branches in git
+        - Gives the info/list of all the branches in git repository
     
     6. git commit -m "<your message>"
         - Used to track the staged files after being added by git add
     
     7. git restore --staged <filename>
         - Used to untrack/unstage the staged file
+
+    8. git clone <http url.git>
+        - Used to clone the remote git repository to local system
+
+    9. git pull origin <branch name>
+        - Used to pull the changes from the remote branch to local git repository
