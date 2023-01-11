@@ -1,14 +1,16 @@
 # Creating git repository
+    git init
     git config --global user.name "Vishi Chaurasiya"
     git config --global user.email "vishichaurasiya@gmail.com"
-    touch .gitignore # To create a .gitignore file
-    git init
-    git add .
-    git commit -m "Initial Commit"
-    git status # Just to see
+    touch .gitignore    # To create a .gitignore file
+
     ssh-keygen -t rsa -b 4096 -C "vishichaurasiya@gmail.com"
     tail <path to id_rsa.pub> # Add this key to your GitHub account
     git remote add origin <ssh url.git>
+
+    git status    # Just to see
+    git add .
+    git commit -m "Initial Commit"
     git push origin master
 
 
