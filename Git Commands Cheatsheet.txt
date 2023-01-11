@@ -1,7 +1,7 @@
 # Creating git repository
     git config --global user.name "Vishi Chaurasiya"
     git config --global user.email "vishichaurasiya@gmail.com"
-    touch .gitignore
+    touch .gitignore # To create a .gitignore file
     git init
     git add .
     git commit -m "Initial Commit"
@@ -26,23 +26,35 @@
     2. git status
         - Gives the information of the current state of the git repository
 
-    3. git checkout -b <branch name>
+    3. git log
+        - Used to review and read a history of everything that happens to a repository
+    
+    4. git show <commit hash/id>
+        - Used to display the changes for that single commit
+
+    5. git checkout -b <branch name>
         - Switching to new branch, if you want to switch to an existing branch then use git checkout <branch name> without -b
 
-    4. git add <filename>
+    6. git add <filename>
         - Used to stage the untracked file but it's still a untracked file until it gets committed
     
-    5. git branch
+    7. git branch
         - Gives the info/list of all the branches in git repository
     
-    6. git commit -m "<your message>"
+    8. git commit -m "<your message>"
         - Used to track the staged files after being added by git add
     
-    7. git restore --staged <filename>
+    9. git restore --staged <filename>
         - Used to untrack/unstage the staged file
 
-    8. git clone <http url.git>
+    10. git clone <http url.git>
         - Used to clone the remote git repository to local system
 
-    9. git pull origin <branch name>
+    11. git pull origin <branch name>
         - Used to pull the changes from the remote branch to local git repository
+
+    12. git remote add origin <ssh url.git>
+        - Used to tell the local git repository on which remote repository to send changes to, you can use the git remote add command
+
+    13. git config --global user.name "Vishi Chaurasiya" & git config --global user.email "vishichaurasiya@gmail.com"
+        - It's only use is to provide substance to the author metadata that is attached to every commit
